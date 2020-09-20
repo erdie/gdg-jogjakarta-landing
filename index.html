@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GDG Jogjakarta</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content="150;url=https://gdg.community.dev/gdg-jogjakarta" />
     <style>
         body, html {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
         }
@@ -25,11 +28,69 @@
             margin-top: 80px;
             margin-left: 80px;
         }
+        .social-media {
+            margin-top: 40px;
+            margin-left: 80px;
+            background-color: white;
+            max-width: 700px;
+            width: 100%;
+            padding: 15px 0;
+            border-radius: 2;
+            text-align: center;
+            font-size: 18px;
+        }
+        .social-media > small {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            display: block;
+        }
+
+        @media (max-width: 750px) {
+            #hero {
+                background-size: 50vh, 40px;
+                height: 100vh;
+                width: 100%;
+            }
+            #hero > img {
+                margin-top: 30px;
+                margin-left: 0px;
+            }
+            .social-media {
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+        }
+
+        @media (min-width: 749px) and (max-width: 1024px) {
+            #hero {
+                background-size: 60vh, 50px;
+                height: 100vh;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <section id="hero">
         <img src="gdgjogjakarta.svg" alt="">
+        <div class="social-media">
+            Visit our official page <a href="http://gdg.community.dev/gdg-jogjakarta">gdg.community.dev/gdg-jogjakarta</a> <br>
+            <small>This page will redirect in <span id="seconds">15</span></small>
+        </section>
     </section>
 </body>
+    <script>
+        timeLeft = 15;
+
+        function countdown() {
+            timeLeft--;
+            document.getElementById("seconds").innerHTML = String( timeLeft );
+            if (timeLeft > 0) {
+                setTimeout(countdown, 1000);
+            }
+        };
+
+        setTimeout(countdown, 1000);
+    </script>
 </html>
