@@ -106,22 +106,22 @@
         <img src="gdgjogjakarta.svg" alt="">
         <div class="social-media">
             Visit our official page <a href="http://gdg.community.dev/gdg-jogjakarta">gdg.community.dev/gdg-jogjakarta</a> <br>
-            <small>This page will redirect in <span id="seconds">15</span> seconds</small>
+            <small>This page will redirect in <span id="seconds">20</span> seconds</small>
         </div>
         <small class="footer">Made with &#10084; in Yogyakarta, by <a href="https://erdiawan.com" target="_blank">erdiawan</a></small>
     </section>
 </body>
     <script>
-        // timeLeft = 15;
+        timeLeft = 20;
 
-        // function countdown() {
-        //     timeLeft--;
-        //     document.getElementById("seconds").innerHTML = String( timeLeft );
-        //     if (timeLeft > 0) {
-        //         setTimeout(countdown, 1000);
-        //     }
-        // };
+        function countdown() {
+            timeLeft--;
+            document.getElementById("seconds").innerHTML = String( timeLeft );
+            if (timeLeft > 0) {
+                setTimeout(countdown, 1000);
+            }
+        };
 
-        // setTimeout(countdown, 1000);
+        setTimeout(countdown, 1000);
     </script>
 </html>
